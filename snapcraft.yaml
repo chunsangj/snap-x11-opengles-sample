@@ -9,7 +9,7 @@ type: app
 apps:
  es2-tringle:
    command: bin/test_es2tri
-   plugs: [opengl]
+   plugs: [opengl,x11]
 
 parts:
  opengles-sample:
