@@ -1,0 +1,17 @@
+name: opengles-sample
+version: "1.0"
+architectures: [ all ]
+summary: OpenGL ES samples (X11)
+description: Simple OpenGL ES sample
+confinement: strict
+type: app
+
+apps:
+ es2-tringle:
+   command: bin/test_es2tri
+   plugs: [home,unity7,opengl]
+
+parts:
+ opengles-sample:
+  plugin: make
+  source: src
