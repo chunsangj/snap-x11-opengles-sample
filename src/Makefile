@@ -14,5 +14,5 @@ clean:
 	gcc ${es2tri} -o ./$@ ${inc} ${libs}
 
 install:
-	install $(DESTDIR)/bin/
-	install ./test_es2tri $(DESTDIR)/bin/test_es2tri
+	install -d -m755 $(DESTDIR)/bin/
+	install -m755 ./test_es2tri $(DESTDIR)/bin/test_es2tri
