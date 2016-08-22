@@ -3,15 +3,36 @@ version: "1.0"
 architectures: [ all ]
 summary: OpenGL ES samples (X11)
 description: Simple OpenGL ES sample
-confinement: strict
+confinement: devmode
 type: app
 
 apps:
  es2-tringle:
    command: bin/test_es2tri
-   plugs: [opengl,x11]
+   plugs: [home,opengl,x11]
 
 parts:
  opengles-sample:
   plugin: make
+  build-packages:
+    - libx11-dev
+    - libgles2-mesa-dev
+  stage-packages:
+    - libegl1-mesa
+    - libgles1-mesa
+    - libgles2-mesa
+    - libgl1-mesa-dri
+    - libgl1-mesa-glx
+    - libx11-dev
+    - libxcb-composite0
+    - libxcb-keysyms1
+    - libxcb-randr0
+    - libxcb-shm0
+    - libxcb-xv0
+    - libxcb1
+    - libxext6
+    - libxi6
+    - libxinerama1
+    - libxpm4
+    - libx11-6
   source: src
