@@ -8,21 +8,20 @@ type: app
 
 apps:
  es2-tringle:
-   command: bin/test_es2tri
-   plugs: [home,opengl,x11]
+   command: bin/wrapper
+   plugs: [home, opengl, x11, unity7]
 
 parts:
  opengles-sample:
   plugin: make
   build-packages:
     - libx11-dev
+    - libegl1-mesa
     - libgles2-mesa-dev
   stage-packages:
     - libegl1-mesa
     - libgles1-mesa
     - libgles2-mesa
-    - libgl1-mesa-dri
-    - libgl1-mesa-glx
     - libx11-dev
     - libxcb-composite0
     - libxcb-keysyms1
@@ -36,3 +35,7 @@ parts:
     - libxpm4
     - libx11-6
   source: src
+ wrapper-copy:
+  plugin: copy
+  files:
+   wrapper: bin/wrapper 
