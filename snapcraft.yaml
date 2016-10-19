@@ -26,17 +26,6 @@ parts:
     - libgles1-mesa
     - libgles2-mesa
     - libx11-dev
-    - libxcb-composite0
-    - libxcb-keysyms1
-    - libxcb-randr0
-    - libxcb-shm0
-    - libxcb-xv0
-    - libxcb1
-    - libxext6
-    - libxi6
-    - libxinerama1
-    - libxpm4
-    - libx11-6
   source: src
  wrapper-copy:
   plugin: copy
