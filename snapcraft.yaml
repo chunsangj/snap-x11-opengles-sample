@@ -8,7 +8,10 @@ type: app
 
 apps:
  es2-tringle:
-   command: bin/wrapper
+   command: bin/es2-tringle.wrapper
+   plugs: [home, opengl, x11, unity7]
+ es2-gears:
+   command: bin/es2-gears.wrapper
    plugs: [home, opengl, x11, unity7]
 
 parts:
@@ -38,4 +41,5 @@ parts:
  wrapper-copy:
   plugin: copy
   files:
-   wrapper: bin/wrapper 
+   es2-tringle.wrapper: bin/es2-tringle.wrapper
+   es2-gears.wrapper: bin/es2-gears.wrapper
