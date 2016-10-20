@@ -7,6 +7,9 @@ confinement: devmode
 type: app
 
 apps:
+ es2-info:
+   command: bin/es2-info.wrapper
+   plugs: [home, opengl, x11, unity7]
  es2-tringle:
    command: bin/es2-tringle.wrapper
    plugs: [home, opengl, x11, unity7]
@@ -30,5 +33,6 @@ parts:
  wrapper-copy:
   plugin: copy
   files:
+   es2-info.wrapper: bin/es2-info.wrapper
    es2-tringle.wrapper: bin/es2-tringle.wrapper
    es2-gears.wrapper: bin/es2-gears.wrapper
