@@ -33,6 +33,4 @@ parts:
  wrapper-copy:
   plugin: copy
   files:
-   es2-info.wrapper: bin/es2-info.wrapper
-   es2-tringle.wrapper: bin/es2-tringle.wrapper
-   es2-gears.wrapper: bin/es2-gears.wrapper
+   wrapper: bin
